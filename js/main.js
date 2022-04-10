@@ -1,5 +1,6 @@
 
-document.querySelector('button').addEventListener('click', getFetch)
+document.querySelector('#next').addEventListener('click', getFetch)
+document.querySelector('#giveUp').addEventListener('click', giveUp)
 let score = 0
 let scoreHere = document.querySelector('#score')
 scoreHere.innerText = score
@@ -75,4 +76,9 @@ function shuffle(array) {
   }
 
   return array;
+}
+
+function giveUp(){
+  document.getElementById('preventDoubleAnswer').style.display = 'block'
+  changeAnswerColor()
 }
