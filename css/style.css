@@ -52,6 +52,9 @@ li{
 button{
   margin-left: 2rem;
 }
+form{
+  display: inline-block;
+}
 
 
 /******************************************

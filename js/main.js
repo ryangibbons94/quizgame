@@ -14,7 +14,9 @@ function getFetch(){
   document.getElementById('preventDoubleAnswer').style.display = 'none'
   Array.from(answersArray).forEach(x=>x.classList.remove('incorrect'))
   Array.from(answersArray).forEach(x=>x.classList.remove('correct'))
-  const url = `https://opentdb.com/api.php?amount=1&difficulty=easy&type=multiple`
+  choice = document.getElementById('choice').value
+  difficulty = document.getElementById('difficulty').value
+  const url = `https://opentdb.com/api.php?amount=1&category=${choice}&difficulty=${difficulty}&type=multiple`
   fetch(url)
       .then(res => res.json()) // parse response as JSON
       .then(data => {
@@ -82,3 +84,4 @@ function giveUp(){
   document.getElementById('preventDoubleAnswer').style.display = 'block'
   changeAnswerColor()
 }
+

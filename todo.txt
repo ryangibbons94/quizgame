@@ -1,0 +1,5 @@
+add all options for topics
+add random option for topics
+add point difference for easy, medium hard questions
+add instructions modal
+start making it look nice
