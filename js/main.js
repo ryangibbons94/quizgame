@@ -1,5 +1,6 @@
 document.querySelector("#next").addEventListener("click", getFetch);
 document.querySelector("#giveUp").addEventListener("click", giveUp);
+document.querySelector("#reset").addEventListener("click", reset);
 let score = 0;
 score = localStorage.getItem("score");
 let scoreHere = document.querySelector("#score");
@@ -97,4 +98,10 @@ function shuffle(array) {
 function giveUp() {
   document.getElementById("preventDoubleAnswer").style.display = "block";
   changeAnswerColor();
+}
+
+function reset() {
+  score = 0;
+  scoreHere.innerText = score;
+  localStorage.removeItem("score");
 }
