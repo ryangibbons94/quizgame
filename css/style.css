@@ -57,11 +57,11 @@ li:hover {
 }
 
 .incorrect {
-  color: red;
+  color: #c70000;
 }
 
 .correct {
-  color: green;
+  color: #09ff00;
 }
 
 #invisible {
