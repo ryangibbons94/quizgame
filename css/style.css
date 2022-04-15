@@ -88,9 +88,9 @@ select {
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
-.buttons {
-  display: inline-block;
-  margin-top: 0;
+#buttons {
+  display: flex;
+  justify-content: space-between;
 }
 
 .top {
@@ -108,7 +108,7 @@ select {
 /* From uiverse.io by @Cuzart */
 button {
   position: relative;
-  display: inline;
+  display: inline-block;
   padding: 0.5em 1em 0.425em 1em;
   font-size: 16px;
   letter-spacing: 0.2em;
@@ -161,8 +161,8 @@ drop down */
   position: relative;
   background-color: #4158d0;
   color: white;
-  padding: 12px;
-  width: 250px;
+  padding: 5px;
+  width: 10em;
   border: none;
   font-size: 20px;
   box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
