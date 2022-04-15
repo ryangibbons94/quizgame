@@ -47,6 +47,7 @@
           </div>
           <div class="box">
             <select name="" id="difficulty">
+              <option value="100">Random</option>
               <option value="easy">Easy</option>
               <option value="medium">Medium</option>
               <option value="hard">Hard</option>
@@ -65,7 +66,10 @@
           </button>
         </div>
       </div>
-      <h3>Score: <span id="score"></span></h3>
+      <h3>
+        Score: <span id="score"></span> <br />
+        Difficulty: <span id="diff"></span>
+      </h3>
       <div class="question">
         <div id="preventDoubleAnswer" class="preventDoubleAnswer"></div>
         <span id="invisible"></span>

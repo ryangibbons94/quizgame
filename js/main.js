@@ -13,12 +13,19 @@ Array.from(answersArray).forEach((element) =>
 let correctAnswer;
 let answers;
 let url;
+let diffArr = ["easy", "medium", "hard"];
 function getFetch() {
   choice = document.getElementById("choice").value;
   document.getElementById("preventDoubleAnswer").style.display = "none";
   Array.from(answersArray).forEach((x) => x.classList.remove("incorrect"));
   Array.from(answersArray).forEach((x) => x.classList.remove("correct"));
-  difficulty = document.getElementById("difficulty").value;
+  if (document.getElementById("difficulty").value != "100") {
+    difficulty = document.getElementById("difficulty").value;
+  } else {
+    const random = Math.floor(Math.random() * diffArr.length);
+    difficulty = diffArr[random];
+  }
+
   if (choice < 50) {
     url = `https://opentdb.com/api.php?amount=1&category=${choice}&difficulty=${difficulty}&type=multiple`;
   } else {
@@ -27,6 +34,7 @@ function getFetch() {
   fetch(url)
     .then((res) => res.json()) // parse response as JSON
     .then((data) => {
+      document.querySelector("#diff").innerText = data.results[0].difficulty;
       answers = data.results[0].incorrect_answers.concat(
         data.results[0].correct_answer
       );
@@ -58,11 +66,11 @@ function checkAnswer(click) {
   if (
     click.target.innerHTML === document.querySelector("#invisible").innerHTML
   ) {
-    score++;
+    addScore();
     scoreHere.innerText = score;
     localStorage.setItem("score", score);
   } else {
-    score--;
+    subtractScore();
     scoreHere.innerText = score;
     localStorage.setItem("score", score);
   }
@@ -108,4 +116,24 @@ function reset() {
   score = 0;
   scoreHere.innerText = score;
   localStorage.removeItem("score");
+}
+
+function addScore() {
+  if (document.querySelector("#diff").innerText === "easy") {
+    score = +score + 1;
+  } else if (document.querySelector("#diff").innerText === "medium") {
+    score = +score + 2;
+  } else if (document.querySelector("#diff").innerText === "hard") {
+    score = +score + 3;
+  }
+}
+
+function subtractScore() {
+  if (document.querySelector("#diff").innerText === "easy") {
+    score = +score - 1;
+  } else if (document.querySelector("#diff").innerText === "medium") {
+    score = +score - 2;
+  } else if (document.querySelector("#diff").innerText === "hard") {
+    score = +score - 3;
+  }
 }
