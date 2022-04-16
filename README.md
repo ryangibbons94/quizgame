@@ -3,7 +3,7 @@ A web app that fetches trivia questions from an API and returns them to the user
 
 **Link to project:** https://random-quizz.netlify.app/
 
-![screenshot of website](https://imgur.com/mSvbSi0)
+![screenshot of website](https://imgur.com/a/G6OGUa6)
 
 ## How It's Made:
 
