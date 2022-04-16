@@ -9,7 +9,7 @@ A web app that fetches trivia questions from an API and returns them to the user
 
 **Tech used:** HTML, CSS, JavaScript
 
-**API Referenced in APP:** https://opentdb.com/
+**API Referenced in App:** https://opentdb.com/
 
 ## Challenges Faced/Lessons Learned:
 
