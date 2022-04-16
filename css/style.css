@@ -15,7 +15,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   padding: 5rem;
-  height: 150vh;
+  height: 180vh;
 }
 * {
   box-sizing: border-box;
@@ -102,6 +102,18 @@ select {
   justify-content: center;
 }
 
+.instructions p {
+  text-align: left;
+  margin-top: 1em;
+  font-size: 1.3rem;
+}
+.instructions p:first-of-type {
+  margin-top: 0;
+}
+.instructions {
+  padding: 2rem;
+  padding-top: 2rem;
+}
 /******************************************
 /* LAYOUT
 /*******************************************/
